@@ -1,0 +1,103 @@
+<ScrollView android:fitsSystemWindows="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/ic_launcher" />
+
+        <!-- User Name Label -->
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+            <EditText
+                android:nextFocusDown="@+id/txtmobilenumber"
+                android:textSize="18sp"
+                android:ellipsize="none"
+                android:id="@+id/txtusername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:hint="User Name"
+                android:textColorHighlight="#000"
+                android:layout_marginBottom="20dip" />
+        </android.support.design.widget.TextInputLayout>
+        <!--  Mobile Number Label -->
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+            <EditText
+                android:id="@+id/txtmobilenumber"
+                android:nextFocusDown="@+id/txtfullname"
+                android:textSize="18sp"
+                android:singleLine="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dip"
+                android:inputType="number"
+                android:maxLines="1"
+                android:hint="Mobile Number"
+                android:layout_marginBottom="20dip" />
+        </android.support.design.widget.TextInputLayout>
+        <!-- Full Name Label -->
+        <android.support.design.widget.TextInputLayout
+            android:theme="@style/TextLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintTextAppearance="@style/TextAppearance.AppCompat.Medium">
+
+            <EditText
+                android:id="@+id/txtfullname"
+                android:textSize="18sp"
+                android:hint="Full Name"
+                android:singleLine="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textVisiblePassword"
+                android:maxLines="1"
+                android:layout_marginTop="5dip" />
+        </android.support.design.widget.TextInputLayout>
+        <!-- Register Button -->
+        <android.support.v7.widget.CardView
+            android:padding="16dp"
+            android:layout_margin="20dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="2dp"
+            app:cardMaxElevation="2dp"
+            app:cardBackgroundColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="?android:actionBarSize">
+
+            <TextView
+                android:id="@+id/btnregister"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/register" />
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    <!-- Registration Form Ends -->
+</ScrollView>
