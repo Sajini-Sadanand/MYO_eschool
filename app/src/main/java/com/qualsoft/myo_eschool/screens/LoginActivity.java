@@ -65,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
                 String... params) {
             Response<DashBoardModel> response = new Response<>();
             eSchoolWebServices mService = eSchoolWebServiceFactory.getService(LoginActivity.this);
+//            file not found error
             try {
                 response = mService.login(mUserName, mMobile, mFullName);
 
@@ -85,18 +86,16 @@ public class LoginActivity extends AppCompatActivity {
                 if (response.isSuccess()) {
 
                     DashBoardModel model = response.getResult();
-//                    try {
-//                    } catch (IOException e) {
-//                        e.printStackTrace();
-//                    }
+                    progressDialogUtility.hideProgressDialog();
+                    Toast.makeText(LoginActivity.this, "Successful", Toast.LENGTH_SHORT).show();
 
                 } else {
                     progressDialogUtility.hideProgressDialog();
                     Toast.makeText(LoginActivity.this, response.getServerMessage(), Toast.LENGTH_SHORT).show();
                 }
             } else {
-//                mFabCircle.hide();
-//                enableViews(true);
+                progressDialogUtility.hideProgressDialog();
+                Toast.makeText(LoginActivity.this, response.getServerMessage(), Toast.LENGTH_SHORT).show();
             }
 
 

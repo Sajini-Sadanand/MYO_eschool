@@ -9,6 +9,6 @@ public class Constants {
     public static final String API_STATUS = "status";
     public static final String API_MESSAGE = "message";
 
-    public static final String BASE_URL = "http://qsmyo.qualsofttech.com/API/";
+    public static final String BASE_URL = "http://myo.qualsofttech.com/API/";
     public static final String VERIFICATION_API = "Android_UserVerficationApi";
 }
